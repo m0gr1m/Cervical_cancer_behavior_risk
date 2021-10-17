@@ -100,4 +100,27 @@ which describes whether respondent has cervical cancer (_1=has cervical cancer, 
 Number of respondents: 72 <br />
 Missing Data: 0
 
+**Two classification algorithms were used in this study:**
++ Naive Bayes (NB)
++ Logistic Regression (LR)
+
+A 10-fold cross validation was applied for each of them, and the results obtained are as follows:
++ NB: 
+  + Accuracy: 91.67%
+  + AUC: 0.96 
++ LR: 
+  + Accuracy: 87.50%
+  + AUC: 0.97
+
 ----
+
+## Aim of the work
+
++ Improving the results obtained by researchers.
++ Presenting additional metrics that seem more appropriate for medical issues, e.g. precision and recall.
+
+----
+
+## Summary of results
+
+abc
