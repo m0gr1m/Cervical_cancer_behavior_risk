@@ -1,8 +1,8 @@
 # Cervical cancer behavior risk
 
-<img src="https://i.imgur.com/DT54FHQ.png"  width="100" align="left">
-
-Cervical cancer is the second most common type of cancer that affects women around the world. 
+> <img src="https://i.imgur.com/DT54FHQ.png"  width="100" align="left">
+>
+>Cervical cancer is the second most common type of cancer that affects women around the world. 
 Especially in developed countries. As with all cancers, early detection offers the best chance for successful treatment, 
 so the ability to use behavioral science, which does not require expensive testing, can have a positive effect 
 on initial diagnosis. 
