@@ -5,11 +5,13 @@ Especially in developed countries. As with all cancers, early detection offers t
 so the ability to use behavioral science, which does not require expensive testing, can have a positive effect 
 on initial diagnosis. 
 
-[Link to presentation.](https://slideplayer.com/slide/11492208/)
-[Link to article](https://www.ingentaconnect.com/content/asp/asl/2016/00000022/00000010/art00111;jsessionid=fmpbofs3ept7m.x-ic-live-02)
+[Link to presentation.](https://slideplayer.com/slide/11492208/) <br />
+[Link to article.](https://www.ingentaconnect.com/content/asp/asl/2016/00000022/00000010/art00111;jsessionid=fmpbofs3ept7m.x-ic-live-02)
+
 ----
 
 ## Variables 
+
 The variables come from widely studied behavioral theory, more specifically:
 + The Health Belief Model (HBM)
 + Protection Motivation Theory (PMT)
