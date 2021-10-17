@@ -1,13 +1,12 @@
 # Cervical cancer behavior risk
-https://archive.ics.uci.edu/ml/datasets/Cervical+Cancer+Behavior+Risk   &lt;-- link to data
-
-[Link to article](https://www.ingentaconnect.com/content/asp/asl/2016/00000022/00000010/art00111;jsessionid=fmpbofs3ept7m.x-ic-live-02)
 
 Cervical cancer is the second most common type of cancer that affects women around the world. 
 Especially in developed countries. As with all cancers, early detection offers the best chance for successful treatment, 
 so the ability to use behavioral science, which does not require expensive testing, can have a positive effect 
 on initial diagnosis. 
 
+[Link to presentation.](https://slideplayer.com/slide/11492208/)
+[Link to article](https://www.ingentaconnect.com/content/asp/asl/2016/00000022/00000010/art00111;jsessionid=fmpbofs3ept7m.x-ic-live-02)
 ----
 
 ## Variables 
