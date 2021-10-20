@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import kurtosis, skew
+from factor_analyzer.factor_analyzer import calculate_kmo
 
 sns.set()
 pd.set_option('display.width', 400)
@@ -87,3 +88,9 @@ sns.heatmap(features.corr(),
             vmax=1, vmin=-1,  # cause corr can be in range from 1 to -1
             mask=np.triu(features.corr())).set_title("Correlogram")
 plt.show()
+
+# 7 - KMO (Kaiser-Meyer-Olkin test)
+kmo_per_variable, kmo_total = calculate_kmo(features)
+print("")
+print("KMO Test")
+print("per variable:", kmo_per_variable, "total:", kmo_total)
