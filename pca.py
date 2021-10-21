@@ -44,7 +44,7 @@ features = scale(features)
 # PCA for all features --------------------------------------------------------------------
 pca_0 = PCA(n_components=np.shape(features)[1])
 pca_0.fit(features)
-res_0 = pca_0.transform(features)
+pca_0.transform(features)
 
 plt.figure(figsize=(10, 8))
 plt.plot(pca_0.explained_variance_ratio_,
