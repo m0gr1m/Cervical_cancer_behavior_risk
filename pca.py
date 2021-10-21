@@ -26,7 +26,7 @@ print("per variable:", kmo_per_variable, "total:", kmo_total)
 count = 0
 to_keep = []
 for i in range(0, kmo_per_variable.size):
-     if kmo_per_variable[i] >= 0.6:
+     if kmo_per_variable[i] >= 0.75:
             to_keep.append(count)
      count += 1
 
@@ -39,6 +39,21 @@ print("Shape of X: ", X.shape)
 
 # Scale -----------------------------------------------------------------------------------
 X = scale(X)
+features = scale(features)
+
+# PCA for all features --------------------------------------------------------------------
+pca_0 = PCA(n_components=np.shape(features)[1])
+pca_0.fit(features)
+res_0 = pca_0.transform(features)
+
+plt.figure(figsize=(10, 8))
+plt.plot(pca_0.explained_variance_ratio_,
+         marker='o', color='black')
+plt.title('Elbow graph')
+plt.xlabel('number of components')
+plt.ylabel('cumulative explained variance')
+plt.xticks(np.arange(0, np.shape(features)[1], 1))
+plt.show()
 
 # PCA -------------------------------------------------------------------------------------
 pca = PCA(n_components=3)
