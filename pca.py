@@ -5,6 +5,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import scale
 from factor_analyzer.factor_analyzer import calculate_kmo
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 pd.set_option('display.width', 400)
 pd.set_option('display.max_columns', 18)
@@ -25,7 +26,7 @@ print("per variable:", kmo_per_variable, "total:", kmo_total)
 count = 0
 to_keep = []
 for i in range(0, kmo_per_variable.size):
-     if kmo_per_variable[i] >= 0.75:
+     if kmo_per_variable[i] >= 0.6:
             to_keep.append(count)
      count += 1
 
@@ -47,6 +48,7 @@ scores = pca.transform(X)
 scores_df = pd.DataFrame(scores, columns=['PC1', 'PC2', 'PC3'])
 df_scores = pd.concat([scores_df, target], axis=1)
 print("")
+print("Final DF")
 print(df_scores)
 
 # Explained variance
@@ -85,4 +87,11 @@ for i in range(len(pc_df)):
 
 plt.title("Cumulative variance")
 plt.ylim(0, 1)  # from o to 100%
+plt.show()
+
+# Final plot ---------------------------------------------------------------------------
+plt.figure(figsize=(12, 8))
+sns.scatterplot(data=df_scores, x='PC1', y='PC2',
+                hue='ca_cervix', palette=['red', 'green'], alpha=0.8)
+plt.title('PCA Plot')
 plt.show()
