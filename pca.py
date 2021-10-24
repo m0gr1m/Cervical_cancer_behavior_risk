@@ -26,9 +26,9 @@ print("per variable:", kmo_per_variable, "total:", kmo_total)
 count = 0
 to_keep = []
 for i in range(0, kmo_per_variable.size):
-     if kmo_per_variable[i] >= 0.75:
-            to_keep.append(count)
-     count += 1
+    if kmo_per_variable[i] >= 0.75:
+        to_keep.append(count)
+    count += 1
 
 print("")
 print("To keep:", to_keep)
@@ -86,7 +86,7 @@ plt.bar(x=pc_df, height=explained_var,
 
 # values for bars
 for i in range(len(pc_df)):
-       plt.text(i, explained_var[i], np.round(explained_var[i], decimals=3), ha='center', va='bottom')
+    plt.text(i, explained_var[i], np.round(explained_var[i], decimals=3), ha='center', va='bottom')
 
 plt.title("Explained variance")
 plt.ylim(0, 1)  # from o to 100%
@@ -98,7 +98,7 @@ plt.bar(x=pc_df, height=cumulative_var,
 
 # values for bars
 for i in range(len(pc_df)):
-       plt.text(i, cumulative_var[i], np.round(cumulative_var[i], decimals=3), ha='center', va='bottom')
+    plt.text(i, cumulative_var[i], np.round(cumulative_var[i], decimals=3), ha='center', va='bottom')
 
 plt.title("Cumulative variance")
 plt.ylim(0, 1)  # from o to 100%
