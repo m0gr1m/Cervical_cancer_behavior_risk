@@ -6,7 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import roc_curve, auc
+
 
 pd.set_option('display.width', 400)
 pd.set_option('display.max_columns', 18)
