@@ -5,6 +5,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import scale
 from factor_analyzer.factor_analyzer import calculate_kmo
 import matplotlib.pyplot as plt
+import plotly.express as px
 import seaborn as sns
 
 pd.set_option('display.width', 400)
@@ -110,3 +111,8 @@ sns.scatterplot(data=df_scores, x='PC1', y='PC2',
                 hue='ca_cervix', palette=['red', 'green'], alpha=0.8)
 plt.title('PCA Plot')
 plt.show()
+
+# Plot 3D ------------------------------------------------------------------------------
+fig = px.scatter_3d(data_frame=df_scores, x='PC1', y="PC2", z='PC3',
+                    color='ca_cervix', color_discrete_sequence=['red', 'green'])
+fig.show()

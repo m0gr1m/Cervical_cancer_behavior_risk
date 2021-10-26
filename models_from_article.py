@@ -6,6 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import roc_curve, auc
 
 pd.set_option('display.width', 400)
 pd.set_option('display.max_columns', 18)
@@ -23,7 +24,7 @@ models = {"LR": LogisticRegression(),
 # Lists for results stores
 names = []
 results = []
-sc = 'accuracy'
+sc = 'roc_auc'  # 'roc_auc' or 'accuracy'
 
 # Loop through models
 for name, model in models.items():
@@ -38,12 +39,14 @@ for name, model in models.items():
     print("%s: %f (%f)" % (name, cv_res.mean(), cv_res.std()))
 
 # boxplot algorithm comparison
-plt.rcParams['figure.figsize'] = [8, 8]
-fig = plt.figure()
-fig.suptitle('Algorithm Comparison')
-ax = fig.add_subplot(111)  # all on the same box
-plt.boxplot(results)
-ax.set_xticklabels(names)
-plt.ylim(0, 1.1)
-plt.ylabel(sc.capitalize())
-plt.show()
+# plt.rcParams['figure.figsize'] = [8, 8]
+# fig = plt.figure()
+# fig.suptitle('Algorithm Comparison')
+# ax = fig.add_subplot(111)  # all on the same box
+# plt.boxplot(results)
+# ax.set_xticklabels(names)
+# plt.ylim(0, 1.1)
+# plt.ylabel(sc.capitalize())
+# plt.show()
+
+
