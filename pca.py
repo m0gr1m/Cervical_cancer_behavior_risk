@@ -111,8 +111,16 @@ sns.scatterplot(data=df_scores, x='PC1', y='PC2',
                 hue='ca_cervix', palette=['red', 'green'], alpha=0.8)
 plt.title('PCA Plot')
 plt.show()
-
+#
 # Plot 3D ------------------------------------------------------------------------------
 fig = px.scatter_3d(data_frame=df_scores, x='PC1', y="PC2", z='PC3',
                     color='ca_cervix', color_discrete_sequence=['red', 'green'])
 fig.show()
+
+# PCA - case inputs
+components_imp = pd.DataFrame(abs(pca.components_), columns=[df.drop(columns=['ca_cervix']).columns.values.tolist()]).T
+components_imp.columns = ['PC1', 'PC2', 'PC3']
+
+print('')
+print('Components importance')
+print(components_imp)
