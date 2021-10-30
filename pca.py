@@ -27,7 +27,7 @@ print("per variable:", kmo_per_variable, "total:", kmo_total)
 count = 0
 to_keep = []
 for i in range(0, kmo_per_variable.size):
-    if kmo_per_variable[i] >= 0.75:
+    if kmo_per_variable[i] >= 0.0:
         to_keep.append(count)
     count += 1
 
