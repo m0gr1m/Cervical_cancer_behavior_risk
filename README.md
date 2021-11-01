@@ -12,6 +12,12 @@ on initial diagnosis.
 
 ----
 
+[Main Report.](https://github.com/m0gr1m/Cervical_cancer_behavior_risk/blob/main/reports/Cervical_Cancer_Report.pdf) <br />
+[Report - Data overview.](https://github.com/m0gr1m/Cervical_cancer_behavior_risk/blob/main/reports/raport_data_overview.pdf) <br />
+[Report - Model Results.](https://github.com/m0gr1m/Cervical_cancer_behavior_risk/blob/main/reports/raport_models_tuning.pdf)
+
+----
+
 ## Variables 
 
 The variables come from widely studied behavioral theory, more specifically:
@@ -123,4 +129,44 @@ A 10-fold cross validation was applied for each of them, and the results obtaine
 
 ## Summary of results
 
-abc
+Because the KMO test result showed a middling level of effectiveness we plotted a PCA graph for the two components that explain approximately 47% of the total variance of the data set. As can be seen with the ellipse, it is possible to mark the area for cases with cancer fairly correctly. 
+
+<img src="https://i.imgur.com/KXgcoCt.png"  width="700">
+
+Using Python and Sklearn, the researchers' results were also improved. First, a group representing 25% of the size of the dataset was separated in a way that included, in appropriate numbers, cases from the minority class (*those with cancer*). In each case, the model was trained on 75% of the original dataset using 10-fold cross validation.
+
+### Logistic Regression (LR)
+
++ data were standardized 
++ tuned parameters: class weight, C
++ model accuracy: 0.94667
+
+ROC curve 
+
+<img src="https://i.imgur.com/tncvMlT.png"  width="600">
+
+Since we were dealing with an unbalanced number among the classes (*less 1/3 of the cases have cancer*) G-Mean was used to determine the best cut-off point and with it, a test of the model's effectiveness was performed on test data (*25% that the model had never seen before*).
+
+**Results after moving the cut-off point.**
+
+<img src="https://i.imgur.com/yAaJN1S.png"  width="400">
+
+### Naive Bayes (NB)
+
++ data have not been standardized 
++ tuned parameters: alpha 
++ model accuracy: 0.87
+
+The same procedure as for logistic regression was used.
+
+ROC curve 
+
+<img src="https://i.imgur.com/LuXTnHc.png"  width="600">
+
+**Results after moving the cut-off point.**
+
+<img src="https://i.imgur.com/VsTvrCb.png"  width="400">
+
+## Conclusion
+
+As can be observed, the results we obtained for Naive Bayes are excellent. We achieved 100% correctness in every metric, which means that the model flawlessly detects cancer cases based on behavioral studies. 
