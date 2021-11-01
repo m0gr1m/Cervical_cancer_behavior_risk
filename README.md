@@ -154,7 +154,7 @@ Since we were dealing with an unbalanced number among the classes (*less 1/3 of 
 ### Naive Bayes (NB)
 
 + data have not been standardized 
-+ tuned parameters: alpha 
++ tuned parameter: alpha 
 + model accuracy: 0.87
 
 The same procedure as for logistic regression was used.
