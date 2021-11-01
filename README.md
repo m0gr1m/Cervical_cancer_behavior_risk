@@ -129,7 +129,7 @@ A 10-fold cross validation was applied for each of them, and the results obtaine
 
 ## Summary of results
 
-Because the KMO test result showed a middling level of effectiveness we plotted a PCA graph for the two components that explain approximately 47% of the total variance of the data set. As can be seen with the ellipse, it is possible to mark the area for cases with cancer fairly correctly. 
+Because the KMO test result showed a middling level of effectiveness we plotted a PCA graph for the two components that explain approximately 47% of the total variance of the dataset. As can be seen with the ellipse, it is possible to mark the area for cases with cancer fairly correctly. 
 
 <img src="https://i.imgur.com/KXgcoCt.png"  width="700">
 
